@@ -32,7 +32,7 @@ export default class App extends React.Component{
   }
 
   handleRedirect() {
-    MYERROR
+    // MYERROR
     history.pushState({page2: 'PaGe2'}, 'my page2 title', '/page2')
     this.setState({ url: '/page2' })
   }
