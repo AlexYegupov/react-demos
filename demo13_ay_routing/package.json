@@ -8,7 +8,9 @@
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start0": "babel -d . src/ && node server.js",
-    "start": "webpack-dev-server --open --mode development"
+    "start": "webpack-dev-server --open --mode development",
+    "buildServer": "babel -d ./dist-serv src/serv/",
+    "startServer": "(cd dist-serv && node server.js)"
   },
   "author": "ruanyf",
   "license": "ISC",
@@ -19,6 +21,7 @@
     "react-dom": "^16.7.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.4",

@@ -37,11 +37,12 @@ http.createServer(function(req, res) {
         <script src="/bundle.js"/>
       </body>
     );
+    console.log(`s r:`, html)
     res.end(html);
   } else  if (req.url == '/bundle.js') {
     res.setHeader('Content-Type', 'text/javascript');
     browserify()
-      .add('./index.js')
+      .add('./browser.js')
       .transform(literalify.configure({
         'react': 'window.React',
         'react-dom': 'window.ReactDOM',
