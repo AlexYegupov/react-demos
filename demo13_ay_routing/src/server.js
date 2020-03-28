@@ -41,7 +41,7 @@ http.createServer(function(req, res) {
   } else  if (req.url == '/bundle.js') {
     res.setHeader('Content-Type', 'text/javascript');
     browserify()
-      .add('./browser.js')
+      .add('./index.js')
       .transform(literalify.configure({
         'react': 'window.React',
         'react-dom': 'window.ReactDOM',

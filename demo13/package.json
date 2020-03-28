@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "build": "babel -d . src/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel -d . src/ && node server.js"
   },
   "author": "ruanyf",
   "license": "ISC",
